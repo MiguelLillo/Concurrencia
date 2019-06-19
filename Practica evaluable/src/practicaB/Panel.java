@@ -73,7 +73,7 @@ public class Panel extends JPanel{
 	}
 	public void escribeLista(List<Integer> l,int area) {
 		int esp;
-		esp=area==2?62:27;
+		esp=area==2?62:27;//esto es para saber cuándo introducir un salto de línea
 		for(int i=0;i<l.size();i++) {
 			areas[area].append(l.get(i).toString());
 			if ((i+1)%esp==0) areas[area].append("\n");

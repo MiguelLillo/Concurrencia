@@ -6,6 +6,7 @@ public class WorkerSecuenciaBits extends SwingWorker<List<Integer>,Integer> {
 	private Panel pan;
 	private int n;	//numero de bits a producir
 	private int a;	//esta a sirve para diferenciar el área sobre la que estamos trabajando
+	int indice=0;
 	public WorkerSecuenciaBits(Panel p,int n,int a) {
 		pan=p;
 		this.n=n;
@@ -19,10 +20,14 @@ public class WorkerSecuenciaBits extends SwingWorker<List<Integer>,Integer> {
 			publish(r.nextInt(2));
 			//l.add(r.nextInt(2));	//publish
 		}
-		return l; //null
+		return null;
 	}
 	
 	//sobreescribir process
+	protected void process(List<Integer> bits) {
+		
+		
+	}
 	public void done() {
 	
 		try {
