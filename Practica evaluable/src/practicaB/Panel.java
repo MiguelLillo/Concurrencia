@@ -1,7 +1,6 @@
 package practicaB;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.util.List;
 
 import javax.swing.*;
 
@@ -71,13 +70,15 @@ public class Panel extends JPanel{
 		bits.addActionListener(ctr);
 		bits.setActionCommand("BITS");
 	}
-	public void escribeLista(List<Integer> l,int area) {
+	public void escribeLista(int b,int area) {
 		int esp;
 		esp=area==2?62:27;//esto es para saber cuándo introducir un salto de línea
-		for(int i=0;i<l.size();i++) {
-			areas[area].append(l.get(i).toString());
-			if ((i+1)%esp==0) areas[area].append("\n");
-		}
+		areas[area].append(String.valueOf(b));
+		
+		//		for(int i=0;i<l.size();i++) {
+//			areas[area].append(l.get(i).toString());
+//			if ((i+1)%esp==0) areas[area].append("\n");
+//		}
 	}
 	public void nProgreso(int n){
 		prog.setValue(n);
